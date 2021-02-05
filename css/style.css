@@ -7,6 +7,11 @@ body {
 header {
     width: 100%;
 }
+@media screen and (max-width: 576px) {
+    header {
+        padding: 25px;
+    }
+}
 body.active::after {
     content: '';
     position: absolute;
@@ -106,23 +111,30 @@ a {
 .navigation ul .contact:hover::before {
     transform: skewX(45deg) translate(120px);
 }
+@media screen and (max-width: 768px) {
+    .navigation ul .contact::before {
+        display: none;
+    }
 
+}
 /* Main Section  */
 .main .line1 {
-    width: 130px;
+    width: 20vh;
     height: 1px;
     background: #dadadad8;
     position: absolute;
     top: 30%;
     transform: translate(-50%, -50%) rotate(-90deg);
+    z-index: -1;
 }
 .main .line2 {
-    width: 130px;
+    width: 20vh;
     height: 1px;
     background: #dadadad8;
     position: absolute;
     top: 80%;
     transform: translate(-50%, -50%) rotate(-90deg);
+    z-index: -1;
 }
 .main .linetxt > div{
     margin: 0 15px;
@@ -132,6 +144,9 @@ a {
     top: 55%;
     transform: translate(-50%, -50%) rotate(-90deg);
     color: #dadadad8;
+    background: #29292b;
+    z-index: 1000;
+    transition: 0.3s ease;
 }
 .main .circle {
     width: 15px;
@@ -163,6 +178,11 @@ a {
 .main .circle .circlediv.active::after {
     background-color: #8fc3b7;
 }
+@media screen and (max-width: 768px) {
+    .main {
+        display: none!important;
+    }
+}
 @keyframes circleanimation {
     0% {
         transform: translate(-50%, -50%) rotate(0deg);
@@ -176,6 +196,21 @@ a {
     top: 27%;
     left: 25%;
     transform: translate(-50%, -50%);
+}
+@media screen and (max-width: 768px) {
+    .maintoptxt {
+        top: 40%;
+    }
+}
+@media screen and (max-height: 570px) {
+    .maintoptxt {
+        top: 50%;
+    }
+}
+@media screen and (max-width: 375px) {
+    .maintoptxt {
+        top: 47%;
+    }
 }
 .maintoptxt p:first-child {
     color: #9b9a9ad8;
@@ -197,31 +232,50 @@ a {
     height: 2px;
     background: #6b6a6a71;
 }
+
 .mainsecondtxt {
     position: absolute;
     top: 50%;
-    left: 45%;
+    left: 43%;
     color: #D5C292;
-    width: 50%;
+    width: 45%;
+    height: 100px;
     transform: translate(-50%, -50%);
-}
-.mainsecondtxt .text-animation li {
-    display: inline-block;
-    opacity: 1;
-}
-.mainsecondtxt .text-animation {
+    animation: mainsecondtxt 0.1s linear forwards;
+    animation-delay: 0.2s;
     opacity: 0;
 }
-.mainsecondtxt .text-animation.hidden {
-    opacity: 1;
+@media screen and (max-width: 768px) {
+    .mainsecondtxt {
+        width: 70%;
+        left: 52%;
+        top: 55%;
+    }
+    .mainsecondtxt h2 {
+        font-size: 14px;
+    }
 }
-.mainsecondtxt .text-animation.hidden li {
-    transition: all 4s ease, color 0.2s ease;
-    -moz-transition: all 4s ease, color 0.2s ease;
-    -o-transition: all 4s ease, color 0.2s ease;
-    -webkit-transition: all 4s ease, color 0.2s ease;
-    -ms-transition: all 4s ease, color 0.2s ease;
-    transform: translateX(0) translateY(0);
+@media screen and (max-width: 375px) {
+    .mainsecondtxt {
+        top: 62%;
+    }
+}
+@keyframes mainsecondtxt {
+    to {
+        opacity: 1;
+    }
+}
+.text-animation span {
+    position: relative;
+    opacity: 0;
+    animation:  textAnimation 3.5s ease-out forwards;
+}
+@keyframes textAnimation {
+   to {
+       top: 0;
+       left: 0;
+       opacity: 1;
+   } 
 }
 .more {
     position: absolute;
@@ -245,13 +299,35 @@ a {
     color: #D5C292;
     transition: 0.3s ease;
 }
+@media screen and (max-width: 768px) {
+    .more {
+        left: 25.5%;
+    }
+    .more a  {
+        font-size: 19px;
+        padding: 7px 15px;
+    }
+    .more a i {
+        font-size: 19px;
+    }
+}
+@media screen and (max-width: 375px) {
+    .more {
+        top: 85%;
+    }
+    .more a {
+        font-size: 16px;
+    }
+}
 .more a:hover {
     color: #dadadacb;
 }
 .box {
     position: absolute;
-    width: 150px;
-    height: 150px;
+    max-width: 180px;
+    max-height: 180px;
+    width: 100%;
+    height: 100%;
     left: 70%;
     top: 55vh;
     border: 3px solid #D5C292;
@@ -259,7 +335,32 @@ a {
     animation: boxanimation 5s linear infinite;
     border-radius: 15px;
 }
-
+@media screen and (max-width: 768px) {
+    .box {
+        left: 60%;
+        top: 60%;
+    }
+}
+@media screen and (max-width: 564px) {
+    .box {
+        left: 50%;
+        top: 60%;
+    }
+}
+@media screen and (max-height: 820px) {
+    .box {
+        max-width: 120px;
+        max-height: 120px;
+    }
+}
+@media screen and (max-width: 375px) {
+    .box {
+        max-width: 80px;
+        max-height: 80px;
+        top: 68%;
+        left: 55%;
+    }
+}
 @keyframes boxanimation {
     0% {
         transform: rotate(0deg) scale(1);

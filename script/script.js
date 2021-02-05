@@ -1,48 +1,38 @@
 const daynight = document.querySelector('.daynight');
+var main = document.querySelector('.main');
+var logo = document.querySelector('.logo');
+
+var rect = logo.getBoundingClientRect();
+var positionX = rect.left;
+
 
 function textEffect() {
     const textAnimation = document.querySelector('.text-animation');
-    var txt = "Web Developer Web Developer Web Developer Web Developer";
 
-    for (let i = 0; i < txt.length; i++) {
-        let textLi = document.createElement('li');
-        let textH2 = document.createElement('h2');
-        let x = txt.charAt(i);
+    document.querySelector('.text-animation h2').innerHTML = document.querySelector('.text-animation h2').textContent.replace(/./g, "<span>$&</span>");
+    let spans = document.querySelectorAll('.text-animation span');
+    for(let i = 0; i < spans.length; i++) {
+        let left = innerWidth * Math.random();
+        let top = innerHeight * Math.random();
 
-        textH2.innerHTML = x;
-        if(textH2.innerHTML < 1) {
-            textH2.style.margin = '0 5px';
+        if(Math.random() < 0.5) {
+            spans[i].style.left = "-0" + left + "px";
         }
-        textLi.appendChild(textH2);
-        textAnimation.appendChild(textLi);
-    }
+        else {
+            spans[i].style.left = left + "px";
+        }
 
-    const hiddenTxt = document.querySelectorAll('.text-animation li');
-
-    if(!textAnimation.classList.contains('hidden')) {
-        hiddenTxt.forEach(element => {
-            function randInteger(min, max) {
-                var rand1 = Math.floor(Math.random() * (max - min)) + min;
-                var rand2 = Math.floor(Math.random() * (max - min)) + min;
-                element.style.transform = `translateX(${rand1}px) translateY(${rand2}px)`;
-            }
-            randInteger(-450, 450);
-        });
-        
-        setTimeout(() => {
-            textAnimation.classList.add('hidden');
-            if(textAnimation.classList.contains('hidden')) {
-                hiddenTxt.forEach(element => {
-                    element.style.transform = `translateX(0px) translateY(0px)`;
-                });
-            }
-        }, 1);
+        if(Math.random() < 0.5) {
+            spans[i].style.top = "-" + top + "px";
+        }
+        else {
+            spans[i].style.top = top + "px";
+        }
     }
 }
 textEffect();
 
 daynight.addEventListener('click', function() {
-    var main = document.querySelector('.main');
     var mainDiv = main.querySelectorAll('div');
     var circle = main.querySelector('.circlediv');
     var logo = document.querySelector('.logo a');
@@ -63,6 +53,7 @@ daynight.addEventListener('click', function() {
         main.children[0].style.boxShadow = '5px 5px 10px rgba(70,70,70,0.5)';
         main.children[2].style.background = '#000';
         main.children[2].style.boxShadow = '5px 5px 10px rgba(70,70,70,0.5)';
+        mainDiv[1].style.background = '#8fc3b7';
         mainDiv.forEach(element => {
             element.style.color = '#000';
             element.style.textShadow = '5px 5px 10px rgba(70,70,70,0.5)';
@@ -104,6 +95,7 @@ daynight.addEventListener('click', function() {
         main.children[0].style.boxShadow = 'unset';
         main.children[2].style.background = '#dadadad8';
         main.children[2].style.boxShadow = 'unset';
+        mainDiv[1].style.background = '#29292b';
         mainDiv.forEach(element => {
             element.style.color = '#dadadad8';
             element.style.textShadow = 'unset';
