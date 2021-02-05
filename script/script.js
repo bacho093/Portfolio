@@ -4,16 +4,18 @@ var main = document.querySelector('.main');
 var logo = document.querySelector('.logo');
 
 // CLOCK
-    var date = new Date();
-    var hh = date.getHours();
-    if(hh < 10) {
-        hh = '0' + hh;
-    }
-    var mm = date.getMinutes();
-    if(mm < 10) {
-        mm = '0' + mm;
-    }
-    clock.innerHTML = "<span>" + hh + ":" + mm + "</span>";
+    setInterval(() => {
+        var date = new Date();
+        var hh = date.getHours();
+        if(hh < 10) {
+            hh = '0' + hh;
+        }
+        var mm = date.getMinutes();
+        if(mm < 10) {
+            mm = '0' + mm;
+        }
+        clock.innerHTML = "<span>" + hh + ":" + mm + "</span>";
+    }, 1000);
 // 
 
 var rect = logo.getBoundingClientRect();
@@ -57,12 +59,15 @@ daynight.addEventListener('click', function() {
     var mainsecondtxt = document.querySelector('.mainsecondtxt');
     var box = document.querySelector('.box');
     var more = document.querySelector('.more');
+    var clock = document.querySelector('.clock');
 
     daynight.classList.toggle('active');
 
     if(daynight.classList.contains('active')) {
         document.body.style.background = '#8fc3b7';
         logo.style.color = '#74742d';
+        clock.style.color = '#282e34';
+        clock.style.textShadow = '5px 5px 10px rgba(70,70,70,0.5)';
         main.children[0].style.background = '#000';
         main.children[0].style.boxShadow = '5px 5px 10px rgba(70,70,70,0.5)';
         main.children[2].style.background = '#000';
@@ -77,6 +82,7 @@ daynight.addEventListener('click', function() {
         dn.style.border = '1px solid #716334';
         li.forEach(element => {
             element.style.color = '#000';
+            element.style.textShadow = '5px 5px 10px rgba(70,70,70,0.5)';
         });
         contact.style.border = '1px solid #2a3533c2';
         contact.style.background = '#8fc3b7';
@@ -103,13 +109,15 @@ daynight.addEventListener('click', function() {
         more.children[0].children[0].style.color = '#D5C292';
     }
     else {
-        document.body.style.background = '#29292b';
+        document.body.style.background = '#282e34';
         logo.style.color = '#D5C292';
+        clock.style.color = '#D5C292';
+        clock.style.textShadow = 'unset';
         main.children[0].style.background = '#dadadad8';
         main.children[0].style.boxShadow = 'unset';
         main.children[2].style.background = '#dadadad8';
         main.children[2].style.boxShadow = 'unset';
-        mainDiv[1].style.background = '#29292b';
+        mainDiv[1].style.background = '#282e34';
         mainDiv.forEach(element => {
             element.style.color = '#dadadad8';
             element.style.textShadow = 'unset';
@@ -119,8 +127,9 @@ daynight.addEventListener('click', function() {
         dn.style.border = '1px solid #dadadaa6';
         li.forEach(element => {
             element.style.color = '#dadada';
+            element.style.textShadow = 'unset';
         });
-        contact.style.background = '#29292b';
+        contact.style.background = '#282e34';
         contact.style.border = '1px solid #b3a27afa';
         contact.style.color = '#eeeef0';
         contact.addEventListener('mouseover', function() {
@@ -128,7 +137,7 @@ daynight.addEventListener('click', function() {
             contact.style.border = '1px solid #b3a27afa';
         });
         contact.addEventListener('mouseout', function() {
-            contact.style.background = '#29292b';
+            contact.style.background = '#282e34';
             contact.style.color = '#eeeef0';
         });
         for(let i = 0; i < maintoptxt.length; i++) {
@@ -147,5 +156,3 @@ daynight.addEventListener('click', function() {
         more.children[0].children[0].style.color = '#a7a172';
     }
 });
-// color: #222220b7;
-// text-shadow: 5px 5px 10px rgba(70,70,70,0.5);
