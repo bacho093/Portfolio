@@ -1,6 +1,20 @@
+const clock = document.querySelector('.clock');
 const daynight = document.querySelector('.daynight');
 var main = document.querySelector('.main');
 var logo = document.querySelector('.logo');
+
+// CLOCK
+    var date = new Date();
+    var hh = date.getHours();
+    if(hh < 10) {
+        hh = '0' + hh;
+    }
+    var mm = date.getMinutes();
+    if(mm < 10) {
+        mm = '0' + mm;
+    }
+    clock.innerHTML = "<span>" + hh + ":" + mm + "</span>";
+// 
 
 var rect = logo.getBoundingClientRect();
 var positionX = rect.left;
