@@ -17,7 +17,7 @@ body {
 }
 @media screen and (max-width: 820px) {
     .clock {
-        top: 7%;
+        top: 15%;
     }
     .clock span {
         width: 100%;
@@ -65,6 +65,7 @@ a {
     -webkit-appearance: none;
     -ms-progress-appearance: none;
     opacity: 0;
+    display: none;
 }
 .navigation ul li .daynight {
     width: 35px;
@@ -99,7 +100,7 @@ a {
         align-items: unset!important;
     }
     .navigation ul li {
-        margin: 12px 0;
+        margin: 8px 0;
     }
     .navigation ul li a{
         font-size: 18px!important;
