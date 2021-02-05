@@ -1,5 +1,46 @@
 const daynight = document.querySelector('.daynight');
 
+function textEffect() {
+    const textAnimation = document.querySelector('.text-animation');
+    var txt = "Web Developer Web Developer Web Developer Web Developer";
+
+    for (let i = 0; i < txt.length; i++) {
+        let textLi = document.createElement('li');
+        let textH2 = document.createElement('h2');
+        let x = txt.charAt(i);
+
+        textH2.innerHTML = x;
+        if(textH2.innerHTML < 1) {
+            textH2.style.margin = '0 5px';
+        }
+        textLi.appendChild(textH2);
+        textAnimation.appendChild(textLi);
+    }
+
+    const hiddenTxt = document.querySelectorAll('.text-animation li');
+
+    if(!textAnimation.classList.contains('hidden')) {
+        hiddenTxt.forEach(element => {
+            function randInteger(min, max) {
+                var rand1 = Math.floor(Math.random() * (max - min)) + min;
+                var rand2 = Math.floor(Math.random() * (max - min)) + min;
+                element.style.transform = `translateX(${rand1}px) translateY(${rand2}px)`;
+            }
+            randInteger(-450, 450);
+        });
+        
+        setTimeout(() => {
+            textAnimation.classList.add('hidden');
+            if(textAnimation.classList.contains('hidden')) {
+                hiddenTxt.forEach(element => {
+                    element.style.transform = `translateX(0px) translateY(0px)`;
+                });
+            }
+        }, 1);
+    }
+}
+textEffect();
+
 daynight.addEventListener('click', function() {
     var main = document.querySelector('.main');
     var mainDiv = main.querySelectorAll('div');
