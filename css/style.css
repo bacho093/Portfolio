@@ -1,13 +1,12 @@
 body {
     background: #282e34;
     height: 100vh;
-    transition: background 0.3s ease;
     overflow: hidden;
 }
 .clock {
     top: 20%;
     right: 10%;
-    /* transition: 0.3s ease; */
+    transition: 0.3s ease;
     color: #D5C292;
 }
 .clock span {
@@ -17,7 +16,11 @@ body {
 }
 @media screen and (max-width: 820px) {
     .clock {
-        top: 15%;
+        position: absolute;
+        top: 10%;
+        left: 50%;
+        right: unset;
+        transform: translate(-50%, -10%);
     }
     .clock span {
         width: 100%;
@@ -92,7 +95,7 @@ a {
 @media screen and (max-width: 820px) {
     .navigation {
         position: absolute;
-        top: 40%;
+        top: 45%;
         left: 15%;
     }
     .navigation ul {
