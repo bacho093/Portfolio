@@ -12,6 +12,11 @@ var mainsecondtxt = document.querySelector('.mainsecondtxt');
 var box = document.querySelector('.box');
 var more = document.querySelector('.more');
 var clock = document.querySelector('.clock');
+var ProfileBtn = document.querySelector('.ProfileBtn');
+var backbtn = document.querySelector('.backbtn');
+var profileContainer = document.querySelector('.profileContainer');
+var profileBox = document.querySelector('.profileContainer .container-large .row > div');
+var profBtn = document.querySelector('.profBtn');
 
 
 // CLOCK
@@ -102,6 +107,8 @@ function updatePage() {
         more.children[0].style.textShadow = '5px 5px 10px rgba(70,70,70,0.5)';
         more.children[0].children[0].style.border = '1px solid rgb(0 0 0 / 38%)';
         more.children[0].children[0].style.color = '#D5C292';
+        profileBox.style.background = 'linear-gradient(to right, #364748, #262a33)';
+        profileBox.style.boxShadow = 'rgb(47 58 62) -5px 0px 5px';
     }
     else {
         document.body.style.background = '#282e34';
@@ -149,6 +156,8 @@ function updatePage() {
         more.children[0].style.textShadow = 'unset';
         more.children[0].children[0].style.border = '1px solid #d5c2924f';
         more.children[0].children[0].style.color = '#a7a172';
+        profileBox.style.background = 'linear-gradient(to right, #191e24, #262a33)';
+        profileBox.style.boxShadow = 'unset';
     }
 }
 
@@ -170,3 +179,15 @@ function pageview() {
     }
 }
 pageview();
+
+// Profile Page 
+    ProfileBtn.addEventListener('click', function() {
+            profileContainer.classList.add('active');
+    });
+    backbtn.addEventListener('click', function() {
+        profileContainer.classList.remove('active');
+    });
+    profBtn.addEventListener('click', function() {
+        profileContainer.classList.add('active');
+});
+// profBtn

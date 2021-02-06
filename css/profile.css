@@ -1,0 +1,91 @@
+/* width */
+::-webkit-scrollbar {
+    width: 7px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: transparent; 
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #d5c292c0; 
+    border-radius: 10px;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #D5C292; 
+  }
+.profileContainer {
+    height: 100%;
+    width: 100%;
+    z-index: 20000;
+    pointer-events: none;
+    left: 0;
+    position: absolute;
+}
+.profileContainer .container-large .row > div {
+    height: 100vh;
+    z-index: 10;
+    background: linear-gradient(to right, #191e24, #262a33);
+    overflow-x: hidden;
+    overflow-y: auto;
+    transform: translateX(100%);
+    opacity: 0;
+    transition: transform 0.5s ease, opacity 0.5s ease;
+}
+.profileContainer.active .container-large .row > div {
+    opacity: 1;
+    pointer-events: all;
+    transform: translateX(0%);
+}
+.profileContainer::after {
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    pointer-events: none;
+    background: #191e2400;
+    transition: 1s ease;
+}
+.profileContainer.active::after {
+    background: #191e24c0;
+}
+.profileContainer .container-large .row > div .backbtn {
+    width: 15px;
+    height: 15px;
+    right: 5%;
+    top: 5%;
+    border: 2px solid rgb(161, 159, 159);
+    border-radius: 50%;
+    transition: color 0.3s ease;
+    cursor: pointer;
+}
+.profileContainer .container-large .row > div .backbtn i {
+    color: rgb(161, 159, 159);
+    font-size: 18px;
+    margin-left: -10px;
+    margin-bottom: 1px;
+    transition: color 0.3s ease;
+}
+.profileContainer .container-large .row > div .backbtn:hover {
+    border: 2px solid rgb(199, 196, 196);
+}
+.profileContainer .container-large .row > div .backbtn:hover > i {
+    color: rgb(199, 196, 196);
+}
+.profileContainer .container-large .row > div .headerTxt h6 i {
+    color: rgba(199, 196, 196, 0.774);
+}
+.profileContainer .container-large .row > div .headerTxt h6 i span{
+    color: #d5c292de;
+}
+.profileContainer .container-large .row > div .headerTxt p {
+    color: rgba(199, 196, 196, 0.774);
+}.profileContainer .container-large .row > div .headerTxt ul li {
+    color: rgba(199, 196, 196, 0.774);
+}

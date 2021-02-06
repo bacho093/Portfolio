@@ -120,7 +120,7 @@ a {
     .prof {
         display: block!important;
     }
-    .prof a {
+    .prof .btn {
         color: #ffc534!important;
     }
 }
@@ -288,6 +288,7 @@ a {
     animation: mainsecondtxt 0.1s linear forwards;
     animation-delay: 0.2s;
     opacity: 0;
+    z-index: 10000;
 }
 @media screen and (max-width: 820px) {
     .mainsecondtxt {
@@ -314,14 +315,17 @@ a {
 .more {
     position: absolute;
     top: 80%;
-    left: 24.5%;
+    left: 23%;
     transform: translate(-50%, -50%);
 }
-.more a {
+.more .btn {
     color: #9b9a9ad8;
     transition: 0.3s ease;
+    outline: none;
+    border: none;
+    box-shadow: none;
 }
-.more a i {
+.more .btn i {
     width: 25px;
     height: 25px;
     border: 1px solid #d5c2924f;
@@ -333,7 +337,7 @@ a {
     color: #D5C292;
     transition: 0.3s ease;
 }
-.more a:hover {
+.more .btn:hover {
     color: #dadadacb;
 }
 @media screen and (max-width: 820px) {
