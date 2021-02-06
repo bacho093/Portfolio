@@ -160,17 +160,19 @@ function updatePage() {
 
 daynight.addEventListener('click', function() {
     daynight.classList.toggle('active');
-    if(sessionStorage.getItem('updatepage') === null) {
-        sessionStorage.setItem('updatepage', 'updated');
+
+    if(localStorage.getItem('updatepage') === null) {
+        localStorage.setItem('updatepage', 'updated');
     }
     else {
-        sessionStorage.removeItem('updatepage');
-    }    
+        localStorage.removeItem('updatepage');
+    }
+    
     updatePage();
 });
 
 function pageview() {
-    if(sessionStorage.getItem('updatepage') === 'updated') {
+    if(localStorage.getItem('updatepage') === 'updated') {
         daynight.classList.add('active');
         updatePage();
     }
