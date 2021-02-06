@@ -12,12 +12,9 @@ var mainsecondtxt = document.querySelector('.mainsecondtxt');
 var box = document.querySelector('.box');
 var more = document.querySelector('.more');
 var clock = document.querySelector('.clock');
-var ProfileBtn = document.querySelector('.ProfileBtn');
 var backbtn = document.querySelector('.backbtn');
 var profileContainer = document.querySelector('.profileContainer');
 var profileBox = document.querySelector('.profileContainer .container-large .row > div');
-var profBtn = document.querySelector('.profBtn');
-
 
 // CLOCK
     setInterval(() => {
@@ -181,13 +178,10 @@ function pageview() {
 pageview();
 
 // Profile Page 
-    ProfileBtn.addEventListener('click', function() {
+    document.querySelector('.about').addEventListener('click', function() {
             profileContainer.classList.add('active');
     });
     backbtn.addEventListener('click', function() {
         profileContainer.classList.remove('active');
     });
-    profBtn.addEventListener('click', function() {
-        profileContainer.classList.add('active');
-});
-// profBtn
+//

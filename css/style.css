@@ -122,6 +122,7 @@ a {
     }
     .prof .btn {
         color: #ffc534!important;
+        letter-spacing: 1px;
     }
 }
 @keyframes daynight {
@@ -315,7 +316,7 @@ a {
 .more {
     position: absolute;
     top: 80%;
-    left: 23%;
+    left: 25%;
     transform: translate(-50%, -50%);
 }
 .more .btn {
