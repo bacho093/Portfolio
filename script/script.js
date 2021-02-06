@@ -1,7 +1,18 @@
-const clock = document.querySelector('.clock');
 const daynight = document.querySelector('.daynight');
 var main = document.querySelector('.main');
 var logo = document.querySelector('.logo');
+var mainDiv = main.querySelectorAll('div');
+var circle = main.querySelector('.circlediv');
+var logoA = document.querySelector('.logo a');
+var li = document.querySelectorAll('.navClass');
+var dn = document.querySelector('.daynight');
+var contact = document.querySelector('.contact');
+var maintoptxt = document.querySelectorAll('.maintoptxt p');
+var mainsecondtxt = document.querySelector('.mainsecondtxt');
+var box = document.querySelector('.box');
+var more = document.querySelector('.more');
+var clock = document.querySelector('.clock');
+
 
 // CLOCK
     setInterval(() => {
@@ -23,8 +34,6 @@ var positionX = rect.left;
 
 
 function textEffect() {
-    const textAnimation = document.querySelector('.text-animation');
-
     document.querySelector('.text-animation h2').innerHTML = document.querySelector('.text-animation h2').textContent.replace(/./g, "<span>$&</span>");
     let spans = document.querySelectorAll('.text-animation span');
     for(let i = 0; i < spans.length; i++) {
@@ -48,24 +57,10 @@ function textEffect() {
 }
 textEffect();
 
-daynight.addEventListener('click', function() {
-    var mainDiv = main.querySelectorAll('div');
-    var circle = main.querySelector('.circlediv');
-    var logo = document.querySelector('.logo a');
-    var li = document.querySelectorAll('.navClass');
-    var dn = document.querySelector('.daynight');
-    var contact = document.querySelector('.contact');
-    var maintoptxt = document.querySelectorAll('.maintoptxt p');
-    var mainsecondtxt = document.querySelector('.mainsecondtxt');
-    var box = document.querySelector('.box');
-    var more = document.querySelector('.more');
-    var clock = document.querySelector('.clock');
-
-    daynight.classList.toggle('active');
-
+function updatePage() {
     if(daynight.classList.contains('active')) {
         document.body.style.background = '#8fc3b7';
-        logo.style.color = '#74742d';
+        logoA.style.color = '#74742d';
         clock.style.color = '#282e34';
         clock.style.textShadow = '5px 5px 10px rgba(70,70,70,0.5)';
         main.children[0].style.background = '#000';
@@ -110,7 +105,7 @@ daynight.addEventListener('click', function() {
     }
     else {
         document.body.style.background = '#282e34';
-        logo.style.color = '#D5C292';
+        logoA.style.color = '#D5C292';
         clock.style.color = '#D5C292';
         clock.style.textShadow = 'unset';
         main.children[0].style.background = '#dadadad8';
@@ -155,4 +150,23 @@ daynight.addEventListener('click', function() {
         more.children[0].children[0].style.border = '1px solid #d5c2924f';
         more.children[0].children[0].style.color = '#a7a172';
     }
+}
+
+daynight.addEventListener('click', function() {
+    daynight.classList.toggle('active');
+    if(sessionStorage.getItem('updatepage') === null) {
+        sessionStorage.setItem('updatepage', 'updated');
+    }
+    else {
+        sessionStorage.removeItem('updatepage');
+    }    
+    updatePage();
 });
+
+function pageview() {
+    if(sessionStorage.getItem('updatepage') === 'updated') {
+        daynight.classList.add('active');
+        updatePage();
+    }
+}
+pageview();

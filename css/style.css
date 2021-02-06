@@ -120,6 +120,9 @@ a {
     .prof {
         display: block!important;
     }
+    .prof a {
+        color: #ffc534!important;
+    }
 }
 @keyframes daynight {
     0% {
