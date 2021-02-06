@@ -12,9 +12,11 @@ var mainsecondtxt = document.querySelector('.mainsecondtxt');
 var box = document.querySelector('.box');
 var more = document.querySelector('.more');
 var clock = document.querySelector('.clock');
-var backbtn = document.querySelector('.backbtn');
+var backbtn = document.querySelectorAll('.backbtn');
 var profileContainer = document.querySelector('.profileContainer');
 var profileBox = document.querySelector('.profileContainer .container-large .row > div');
+var ContactContainer = document.querySelector('.ContactContainer');
+var contactBox = document.querySelector('.ContactContainer .container-large .row > div');
 
 // CLOCK
     setInterval(() => {
@@ -106,6 +108,8 @@ function updatePage() {
         more.children[0].children[0].style.color = '#D5C292';
         profileBox.style.background = 'linear-gradient(to right, #364748, #262a33)';
         profileBox.style.boxShadow = 'rgb(47 58 62) -5px 0px 5px';
+        contactBox.style.background = 'linear-gradient(to right, #364748, #262a33)';
+        contactBox.style.boxShadow = 'rgb(47 58 62) -5px 0px 5px';
     }
     else {
         document.body.style.background = '#282e34';
@@ -155,6 +159,8 @@ function updatePage() {
         more.children[0].children[0].style.color = '#a7a172';
         profileBox.style.background = 'linear-gradient(to right, #191e24, #262a33)';
         profileBox.style.boxShadow = 'unset';
+        contactBox.style.background = 'linear-gradient(to right, #191e24, #262a33)';
+        contactBox.style.boxShadow = 'unset';
     }
 }
 
@@ -183,7 +189,19 @@ pageview();
     document.querySelector('.about').addEventListener('click', function() {
             profileContainer.classList.add('active');
     });
-    backbtn.addEventListener('click', function() {
-        profileContainer.classList.remove('active');
-    });
 //
+
+// Contact Page 
+document.querySelector('.contact').addEventListener('click', function() {
+    ContactContainer.classList.add('active');
+});
+//
+
+// Close Pages 
+backbtn.forEach(element => {
+    element.addEventListener('click', function() {
+        profileContainer.classList.remove('active');
+        ContactContainer.classList.remove('active');
+    }); 
+});
+// 

@@ -4,6 +4,26 @@ body {
     overflow: hidden;
     transition: all 0.2s;
 }
+/* width */
+::-webkit-scrollbar {
+    width: 7px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: transparent; 
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #d5c292c0; 
+    border-radius: 10px;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #D5C292; 
+  }
 .clock {
     top: 20%;
     right: 10%;
@@ -116,13 +136,6 @@ a {
     }
     .navigation ul .contact {
         padding: 2px 20px 5px 20px!important;
-    }
-    .prof {
-        display: block!important;
-    }
-    .prof .btn {
-        color: #ffc534!important;
-        letter-spacing: 1px;
     }
 }
 @keyframes daynight {

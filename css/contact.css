@@ -1,4 +1,4 @@
-.profileContainer {
+.ContactContainer {
     height: 100%;
     width: 100%;
     z-index: 20000;
@@ -6,7 +6,7 @@
     left: 0;
     position: absolute;
 }
-.profileContainer .container-large .row > div {
+.ContactContainer .container-large .row > div {
     height: 100vh;
     z-index: 10;
     background: linear-gradient(to right, #191e24, #262a33);
@@ -16,12 +16,12 @@
     opacity: 0;
     transition: transform 0.5s ease, opacity 0.5s ease;
 }
-.profileContainer.active .container-large .row > div {
+.ContactContainer.active .container-large .row > div {
     opacity: 1;
     pointer-events: all;
     transform: translateX(0%);
 }
-.profileContainer::after {
+.ContactContainer::after {
     position: absolute;
     content: '';
     top: 0;
@@ -32,10 +32,10 @@
     background: #191e2400;
     transition: 1s ease;
 }
-.profileContainer.active::after {
+.ContactContainer.active::after {
     background: #191e24c0;
 }
-.profileContainer .container-large .row > div .backbtn {
+.ContactContainer .container-large .row > div .backbtn {
     width: 15px;
     height: 15px;
     right: 5%;
@@ -45,27 +45,32 @@
     transition: color 0.3s ease;
     cursor: pointer;
 }
-.profileContainer .container-large .row > div .backbtn i {
+.ContactContainer .container-large .row > div .backbtn i {
     color: rgb(161, 159, 159);
     font-size: 18px;
     margin-left: -10px;
     margin-bottom: 1px;
     transition: color 0.3s ease;
 }
-.profileContainer .container-large .row > div .backbtn:hover {
+.ContactContainer .container-large .row > div .backbtn:hover {
     border: 2px solid rgb(199, 196, 196);
 }
-.profileContainer .container-large .row > div .backbtn:hover > i {
+.ContactContainer .container-large .row > div .backbtn:hover > i {
     color: rgb(199, 196, 196);
 }
-.profileContainer .container-large .row > div .headerTxt h6 i {
+.ContactContainer .container-large .row > div .headerTxt h6 i {
     color: rgba(199, 196, 196, 0.774);
 }
-.profileContainer .container-large .row > div .headerTxt h6 i span{
+.ContactContainer .container-large .row > div .headerTxt h6 i span{
     color: #d5c292de;
 }
-.profileContainer .container-large .row > div .headerTxt p {
+.ContactContainer .container-large .row > div .headerTxt p {
     color: rgba(199, 196, 196, 0.774);
-}.profileContainer .container-large .row > div .headerTxt ul li {
+
+}
+.ContactContainer .container-large .row > div .headerTxt p i {
+    color: #d5c292de;
+}
+.ContactContainer .container-large .row > div .headerTxt ul li {
     color: rgba(199, 196, 196, 0.774);
 }
