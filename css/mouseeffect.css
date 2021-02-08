@@ -1,0 +1,48 @@
+.importantTxt {
+    color: #D5C292;
+    text-shadow: 5px 4px 10px #282e34;
+    z-index: 10;
+}
+.textContent {
+    text-shadow: 5px 4px 10px #282e34;
+    z-index: 10;
+}
+.cursor {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: #D5C292;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    opacity: 0;
+    transition: all 0.3s ease;
+    transition-property: opacity, transform;
+    transform-origin: 100% 100%;
+    z-index: -1;
+    animation: cursor 4s linear infinite;
+    border: 2px solid #D5C292;
+}
+.hovered-cursor {
+    transform: scale(1.7);
+}
+
+@keyframes cursor {
+    0% {
+        background: #D5C292;
+    }
+    20% {
+        background: #bdd592;
+    }
+    40% {
+        background: #7cce87;
+    }
+    60% {
+        background: #7ccece;
+    }
+    80% {
+        background: #cf92d5;
+    }
+    100% {
+        background: #D5C292;
+    }
+}

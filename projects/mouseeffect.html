@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="shortcut icon" href="../images/logo.png" type="image/x-icon">
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <!-- FONT AWESOME -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" />
+    <link rel="stylesheet" href="../css/navigation.css">
+    <link rel="stylesheet" href="../css/projects.css">
+    <link rel="stylesheet" href="../css/mouseeffect.css">
+    <title>Portfolio | Bacho</title>
+</head>
+<body>
+    <!-- <header> -->
+        <div class="container d-flex justify-content-between align-items-center">
+            <div class="d-flex">
+                <div class="logo py-3 mt-2"><a href="../index.html">B</a></div>
+            </div>
+            <div class="navigation">
+                <ul class="list-unstyled d-flex align-items-center">
+                    <li class='d-flex align-items-center mt-1 p-2'>
+                        <label for="daynight" class='daynight'></label>
+                        <input type="checkbox" name="daynight" id="daynight">
+                    </li>
+                    <li class='mhover p-2'>
+                        <a href="../projects.html" class='navClass'>Projects</a>
+                    </li>
+                    <li class='mhover p-2'>
+                        <a href="#" class='navClass about'>About</a>
+                    </li>
+                    <li class='prof d-none p-2'>
+                        <button href="#" class='btn navClass fw-bold px-0 profBtn'>Profiles</button>
+                    </li>
+                    <li>
+                        <a href="#" class='contact navClass'>Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    <!-- </header> -->
+
+
+    <div class="container-large">
+        <div class="row g-0">
+            <!-- SIDE BAR  -->
+            <div class="col-md-2 position-sticky">
+                <div class="sidebar pt-4">
+                    <ul class='list-unstyled text-center'>
+                        <li><a href="../projects.html">All Projects</a></li>
+                        <li><a href="todolist.html">TODO LIST</a></li>
+                        <li><a href="#">Shopping Card</a></li>
+                        <li><a href="#">SVG Animation</a></li>
+                        <li><a href="mouseeffect.html" class='text-info'>Cursor Animation</a></li>
+                    </ul>
+                </div>
+            </div>
+            <!-- END SIDE BAR  -->
+            <div class="col-md-10">
+                <!-- Mouse Effect -->
+                <div class="cursor position-absolute"></div>
+                <div class="mainsection">
+                    <div class="textContent mt-5 pt-5 text-white w-75 mx-auto">
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Hic enim aperiam harum ad dolores eum, amet autem dolore officiis suscipit ratione quam neque cupiditate dignissimos nemo dicta nam possimus assumenda?</p>
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Hic enim aperiam harum ad dolores eum, amet autem dolore officiis suscipit ratione quam neque cupiditate dignissimos nemo dicta nam possimus assumenda?</p>
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Hic enim aperiam harum ad dolores eum, amet autem dolore officiis suscipit ratione quam neque cupiditate dignissimos nemo dicta nam possimus assumenda?</p>
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Hic enim aperiam harum ad dolores eum, amet autem dolore officiis suscipit ratione quam neque cupiditate dignissimos nemo dicta nam possimus assumenda?</p>
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Hic enim aperiam harum ad dolores eum, amet autem dolore officiis suscipit ratione quam neque cupiditate dignissimos nemo dicta nam possimus assumenda?</p>
+                    </div>
+                    <div class="importantTxt w-75 mx-auto mt-5 pt-5">
+                        <p class='text-uppercase'>For the cursor animation we can use any image, svg image or do any style of cursor with us.</p>
+                    </div>
+                </div>
+                <!-- END Mouse Effect -->
+            </div>
+        </div>
+    </div>
+
+
+<script src="../script/mouse.js"></script>
+<script src="../script/projects.js"></script>
+<!-- JQUERY  -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<!-- JavaScript Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+</body>
+</html>
