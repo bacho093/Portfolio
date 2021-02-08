@@ -1,0 +1,53 @@
+/* SLIDE 1 */
+.slides > div {
+    height: 50vh;
+    display: none;
+    opacity: 0;
+    transition: all 0.3s ease;
+    line-height: 50vh;
+    font-size: 6rem;
+}
+.slides > div.active {
+    display: block;
+    opacity: 1;
+    animation: slide 0.5s ease forwards;
+}
+.controls > div {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 20px;
+    cursor: pointer;
+}
+.controls .prev {
+    left: 5%;
+}
+.controls .next {
+    right: 5%;
+}
+@keyframes slide {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+.indicator {
+    position: absolute;
+    bottom: 3%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.indicator > div {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background: #fff;
+    margin: 0 5px;
+    padding: 5px;
+    cursor: pointer;
+}
+.indicator > div.active {
+    background: #D5C292;
+}

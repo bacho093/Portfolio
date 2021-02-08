@@ -27,7 +27,7 @@ a {
     height: 100vh;
     top: 0;
 }
-.sidebar ul li:first-child a{
+.sidebar ul li a.active{
     color: #D5C292;
     font-weight: bold;
 }

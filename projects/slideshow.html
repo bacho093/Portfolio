@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" />
     <link rel="stylesheet" href="../css/navigation.css">
     <link rel="stylesheet" href="../css/projects.css">
-    <link rel="stylesheet" href="../css/todolist.css">
+    <link rel="stylesheet" href="../css/slideshow.css">
     <title>Portfolio | Bacho</title>
 </head>
 <body>
@@ -54,9 +54,9 @@
                 <div class="sidebar pt-4">
                     <ul class='list-unstyled text-center'>
                         <li><a href="../projects.html">All Projects</a></li>
-                        <li><a href="todolist.html" class='active'>TODO LIST</a></li>
+                        <li><a href="todolist.html">TODO LIST</a></li>
                         <li><a href="#">Shopping Card</a></li>
-                        <li><a href="slideshow.html">SlideShow</a></li>
+                        <li><a href="slideshow.html" class='active'>SlideShow</a></li>
                         <li><a href="#">SVG Animation</a></li>
                         <li><a href="mouseeffect.html">Cursor Animation</a></li>
                     </ul>
@@ -64,40 +64,43 @@
             </div>
             <!-- END SIDE BAR  -->
             <div class="col-md-10">
-                <!-- TODO LIST -->
-                <div class="main d-flex justify-content-center align-items-center w-100 mt-5">
-                    <div class="form w-50 d-flex justify-content-center flex-column">
-                        <form action="" method="get" class="addForm position-relative my-2">
-                            <input type="text" class='form-control text-secondary' placeholder="ADD TODO...">
-                            <button class="btn addbtn"><i class="fas fa-plus"></i></button>
-                        </form>
-            
-                        <div class="todoList rounded-3 w-100">
-                            <ul class="nav border-bottom">
-                                <li class="nav-item border-end">
-                                    <a href="#tasks" class="nav-link active" data-bs-toggle="tab"><i class="fas fa-th-list"></i></a>
-                                </li>
-                                <li class="nav-item border-start">
-                                    <a href="#completed" class="nav-link" data-bs-toggle="tab"><i class="far fa-calendar-check"></i></a>
-                                </li>
-                            </ul>
-            
-                            <div class="tab-content">
-                                <div class="uncompleted tab-pane fade show active" id="tasks">
-                                </div>
-                                <div class="completed tab-pane fade" id="completed">
-                                </div>
-                            </div>
-                        </div>
+                <!-- SlideShow 1 -->
+                <h5 class="text-light text-center mt-5 mb-4">-- Without Moving --</h5>
+                <div class="slider px-3 text-center text-light position-relative border">
+                    <div class="slides">
+                        <div class="slide w-100 bg-secondary active">1</div>
+                        <div class="slide w-100 bg-secondary">2</div>
+                        <div class="slide w-100 bg-secondary">3</div>
                     </div>
+                    <div class="controls">
+                        <div class="prev"><i class="fas fa-chevron-left"></i></div>
+                        <div class="next"><i class="fas fa-chevron-right"></i></div>
+                    </div>
+                    <div class="indicator d-flex"></div>
                 </div>
-                <!-- END TODO LIST -->
+            <!-- END SlideShow 1 -->
+
+            <!-- SlideShow 2 -->
+            <h5 class="text-light text-center mt-5 mb-4">-- Moving --</h5>
+            <div class="slider2 px-3 text-center text-light position-relative border">
+                <div class="slides2">
+                    <div class="slide w-100 bg-secondary active">1</div>
+                    <div class="slide w-100 bg-secondary">2</div>
+                    <div class="slide w-100 bg-secondary">3</div>
+                </div>
+                <div class="controls">
+                    <div class="prev2"><i class="fas fa-chevron-left"></i></div>
+                    <div class="next2"><i class="fas fa-chevron-right"></i></div>
+                </div>
+                <div class="indicator d-flex"></div>
+            </div>
+            <!-- END SlideShow 2 -->
             </div>
         </div>
     </div>
 
 
-<script src="../script/todolist.js"></script>
+<script src="../script/slideshow.js"></script>
 <script src="../script/projects.js"></script>
 <!-- JQUERY  -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
