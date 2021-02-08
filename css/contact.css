@@ -5,6 +5,7 @@
     pointer-events: none;
     left: 0;
     position: absolute;
+    overflow: hidden;
 }
 .ContactContainer .container-large .row > div {
     height: 100vh;
