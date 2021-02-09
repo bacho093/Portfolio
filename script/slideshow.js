@@ -1,3 +1,4 @@
+// SLIDE ! 
 const slides = document.querySelector('.slides').children;
 const prev = document.querySelector('.prev');
 const next = document.querySelector('.next');
@@ -82,4 +83,24 @@ function resetTimer() {
 function autoPlay() {
     nextSlide();
     updateIndicator();
+}
+
+// SLIDE 2 
+const slides2 = document.querySelector('.slides2').children;
+const prev2 = document.querySelector('.prev2');
+const next2 = document.querySelector('.next2');
+let index = 0;
+
+prev2.addEventListener('click', function() {
+    prev2Slide();
+});
+
+next2.addEventListener('click', function() {
+    next2Slide();
+});
+
+function changeSlide2() {
+    if(index == 0) {
+        
+    }
 }
