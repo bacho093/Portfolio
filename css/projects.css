@@ -23,10 +23,6 @@ a {
 .sidebar ul li a:hover {
     color: rgb(245, 245, 245);
 }
-.row > .col-md-2 {
-    height: 100vh;
-    top: 0;
-}
 .sidebar ul li a.active{
     color: #D5C292;
     font-weight: bold;

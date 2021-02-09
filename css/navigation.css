@@ -132,3 +132,69 @@ a {
 .navigation ul .contact:hover::before {
     transform: skewX(45deg) translate(120px);
 }
+@media screen and (max-width: 780px) {
+    .sidebar ul li {
+        transform: translateX(0)!important;
+    }
+    .toggle .line1 {
+        transform: rotate(-45deg) translate(-4px, 5px)!important;
+    }
+    .toggle .line3 {
+        transform: rotate(45deg) translate(-4px, -4px)!important;
+    }
+    .navigation {
+        position: absolute;
+        left: 0;
+        top: 0%;
+        left: 0;
+        background: linear-gradient(to right, #191e24, #262a33);
+        box-shadow: 5px 5px 10px rgba(70,70,70,0.5);
+        width: 200px;
+        height: 100%;
+        transform: translateX(-100%);
+        opacity: 0;
+        transition: 0.5s ease;
+        z-index: 100;
+    }
+    .navigation.active {
+        transform: translate(0%);
+        opacity: 1;
+    }
+    .navigation ul {
+        flex-direction: column;
+        margin-top: 50%;
+    }
+    .navigation ul li {
+        margin-right: unset!important;
+        margin: 5% 0;
+    }
+}
+.burger {
+    cursor: pointer;
+    overflow: hidden;
+    transition: 0.3s ease;
+    display: none;
+}
+.burger > div {
+    width: 20px;
+    height: 1px;
+    background: #D5C292;
+    margin: 5px;
+    transition: all 0.5s ease;
+}
+.toggle .line1 {
+    transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.toggle .line2 {
+    transform: scale(0);
+}
+.toggle .line3 {
+    transform: rotate(45deg) translate(-3px, -4px);
+}
+
+@media screen and (max-width: 780px) {
+    .burger {
+        display: block;
+    }
+}

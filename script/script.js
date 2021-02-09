@@ -186,14 +186,18 @@ function pageview() {
 pageview();
 
 // Profile Page 
+let testi = 0;
+
     document.querySelector('.about').addEventListener('click', function() {
             profileContainer.classList.add('active');
+            document.title = 'Portfolio | About';
     });
 //
 
 // Contact Page 
 document.querySelector('.contact').addEventListener('click', function() {
     ContactContainer.classList.add('active');
+    document.title = 'Portfolio | Contact';
 });
 //
 
@@ -202,6 +206,7 @@ backbtn.forEach(element => {
     element.addEventListener('click', function() {
         profileContainer.classList.remove('active');
         ContactContainer.classList.remove('active');
+        document.title = 'Portfolio | Bacho';
     }); 
 });
 // 
