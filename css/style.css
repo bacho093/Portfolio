@@ -1,7 +1,8 @@
 body {
     background: #282e34;
-    height: 100vh;
-    overflow: hidden;
+    max-height: 100%;
+    height: auto;
+    /* overflow: hidden; */
     transition: all 0.2s;
 }
 /* width */
@@ -332,6 +333,9 @@ a {
     .maintoptxt {
         display: none!important;
     }
+}
+.mainCont {
+    overflow: hidden;
 }
 .mainsecondtxt {
     position: absolute;

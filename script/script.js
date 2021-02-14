@@ -18,6 +18,7 @@ var profileBox = document.querySelector('.profileContainer .container-large .row
 var ContactContainer = document.querySelector('.ContactContainer');
 var contactBox = document.querySelector('.ContactContainer .container-large .row > div');
 
+
 // CLOCK
     setInterval(() => {
         var date = new Date();
