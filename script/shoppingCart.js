@@ -50,14 +50,14 @@ function plusQ(e) {
     else {
         qty.classList.add('active2');
     }
-    qty.innerText = qVal;
 
     setTimeout(() => {
+        qty.innerText = qVal;
         qty.classList.remove('active2');
         qty.classList.add('active1');
+        countTotal();
     }, 300);
 
-    countTotal();
 
 }
 
@@ -80,14 +80,14 @@ function minusQ(e) {
     else {
         qty.classList.add('active4');
     }
-    qty.innerText = qVal;
 
     setTimeout(() => {
+        qty.innerText = qVal;
         qty.classList.remove('active4');
         qty.classList.add('active3');
+        countTotal();
     }, 300);
 
-    countTotal();
 }
 
 function removeItem() {
