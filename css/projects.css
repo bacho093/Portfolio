@@ -20,6 +20,9 @@ a {
     color: #c5c4c4;
     transition: 0.3s ease;
 }
+.sidebar ul li.active a {
+    color: #000;
+}
 .sidebar ul li a:hover {
     color: rgb(245, 245, 245);
 }

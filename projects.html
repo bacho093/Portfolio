@@ -11,6 +11,9 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" />
     <link rel="stylesheet" href="css/navigation.css">
     <link rel="stylesheet" href="css/projects.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/contact.css">
+    <link rel="stylesheet" href="css/profile.css">
     <title>Portfolio | Projects</title>
     <style>
         .sidebar ul li {
@@ -21,7 +24,7 @@
             position: relative;
             transition: 0.8s ease;
         }
-        .sidebar ul li:nth-child(odd) {
+        .sidebar ul li:nth-child(even) {
             width: 210px;
         }
         .sidebar ul li::after {
@@ -42,6 +45,12 @@
         }
         .sidebar ul li:hover::after {
             width: 100%;
+        }
+        .sidebar ul li.active {
+        border-bottom: 1px solid rgba(202, 202, 202, 0.575);
+        }
+        .sidebar ul li.active:hover {
+            border-bottom: 1px solid rgba(202, 202, 202, 0.575);
         }
     </style>
 </head>
@@ -86,7 +95,7 @@
         <!-- SIDE BAR  -->
         <div class="sidebar d-flex align-items-center justify-content-center mt-5">
             <ul class='list-unstyled text-center'>
-                <li><a href="projects.html" class="active">All Projects</a></li>
+                <li><a href="projects.html" class="active">Link to all projects</a></li>
                 <li><a href="projects/todolist.html">TODO LIST</a></li>
                 <li><a href="projects/shoppingCart.html">Shopping Cart</a></li>
                 <li><a href="projects/slideshow.html">SlideShow</a></li>
@@ -97,6 +106,70 @@
     </div>
 
 
+    <!-- Profile -->
+    <div class="profileContainer w-100">
+        <div class="container-large">
+            <div class="row g-0 justify-content-end">
+                <div class="col-md-6 px-5">
+                    <div class="headerTxt text-start my-5">
+                        <h6><i><span>Bacho</span> / Front-End Developer</i></h6>
+                        <p class="mt-5">Hi everybody.</p>
+                        <p>My name is Bacho Vashakidze. Just call me "Bacho". I am from GEORGIA. I am the web Front End developer since 2014. I graduated from the Georgian Technical University, Faculty of Programming.</p>
+                        <p>I also do Back End of websites with PHP -> LARAVEL.</p>
+                        <p>I work with programming languages:</p>
+                        <ul class="list-unstyled ms-2">
+                            <li>- HTML</li>
+                            <li>- CSS</li>
+                            <li>- SCSS</li>
+                            <li>- JavaScript</li>
+                            <li>- JQUERY</li>
+                            <li>- Bootstrap</li>
+                            <li>- Laravel</li>
+                        </ul>
+                        <p>Version control:</p>
+                        <ul class="list-unstyled ms-2">
+                            <li>- Bitbucket</li>
+                            <li>- Github</li>
+                            <li>- GitLab</li>
+                        </ul>
+                        <p class="w-50 my-2">Thank you.</p>
+                        <div class="backbtn position-absolute d-flex align-items-center"><i class="fas fa-long-arrow-alt-left"></i></div>   
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+<!-- End Profile -->
+
+<!-- Contact -->
+<div class="ContactContainer w-100">
+    <div class="container-large">
+        <div class="row g-0 justify-content-end">
+            <div class="col-md-6 px-5">
+                <div class="headerTxt text-start my-5">
+                    <h6><i><span>Bacho</span> / Front-End Developer</i></h6>
+                    <p class="mt-5">Email: <i>vvkh93@gmail.com</i></p>
+                    <p>Phone Number: <i>+995 557 36 48 83</i></p>
+                    <ul class="list-unstyled ms-2">
+                        <p class='mt-5' style='color: #d5c292de;'>You can also contact me on:</p>
+                        <li class='my-2'>- WhatsApp</li>
+                        <li>- Viber</li>
+                    </ul>
+                    <ul class="list-unstyled ms-2">
+                        <p class='mt-5' style='color: #d5c292de;'>You can find me on:</p>
+                        <li>- <a href="#">Upwork</a></li>
+                        <li class='my-2'>- <a href="#">Linkedin</a></li>
+                    </ul>
+                    <p class="w-75 mt-5 mb-3 pt-5">Thanks for your attention.</p>
+                    <div class="backbtn position-absolute d-flex align-items-center"><i class="fas fa-long-arrow-alt-left"></i></div>   
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- End Contact -->
+
+<script src="script/changeview.js"></script>
 <script src="script/projects.js"></script>
 <!-- JQUERY  -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>

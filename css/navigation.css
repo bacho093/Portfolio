@@ -146,7 +146,7 @@ a {
         position: absolute;
         left: 0;
         top: 0%;
-        left: 0;
+        left: 0%;
         background: linear-gradient(to right, #191e24, #262a33);
         box-shadow: 5px 5px 10px rgba(70,70,70,0.5);
         width: 200px;
@@ -159,10 +159,19 @@ a {
     .navigation.active {
         transform: translate(0%);
         opacity: 1;
+        left: 0;
+        top: 0;
+        background: linear-gradient(to right, #364748, #262a33);
+        box-shadow: 'rgb(47 58 62) -5px 0px 5px';
+    }
+    .navigation.active ul li a {
+        color: #fff!important;
     }
     .navigation ul {
         flex-direction: column;
         margin-top: 50%;
+        padding-left: 15%;
+        padding-top: 5%;
     }
     .navigation ul li {
         margin-right: unset!important;
@@ -181,6 +190,9 @@ a {
     background: #D5C292;
     margin: 5px;
     transition: all 0.5s ease;
+}
+.burger.active > div {
+    background: #000;
 }
 .toggle .line1 {
     transform: rotate(-45deg) translate(-5px, 6px);
