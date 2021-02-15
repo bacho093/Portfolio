@@ -65,10 +65,10 @@
             <!-- END SIDE BAR  -->
             <div class="col-md-10">
                 <!-- Shopping Cart -->
-                    <div class="accordion">
+                <div class="accordion" id="accordionExample">
                         <div class="accordion-item">
-                            <h2 class="accordion-header">
-                                <button class="accordion-button" type="button" data-bs-toggle='collapse' data-bs-target='#collapseOne' aria-expanded="true" aria-controls="collapseOne">
+                            <h2 class="accordion-header" id="headingOne">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
                                     Shopping Cart <span></span>
                                 </button>
                             </h2>
@@ -77,77 +77,15 @@
                                   <div class="container">
                                       <div class="row">
                                           <div class="col-md-9">
+                                            <div class="productDetail mb-3 border-bottom w-100">
+                                                <div class="row w-100 text-center text-muted">
+                                                    <div class="col-3 text-start">PRODUCT DETAILS</div>
+                                                    <div class="col-3">QUANTITY</div>
+                                                    <div class="col-3">PRICE</div>
+                                                    <div class="col-3">TOTAL</div>
+                                                </div>
+                                            </div>
                                               <div class="product">
-                                                <div class="productDetail mb-3 border-bottom w-100">
-                                                    <div class="row w-100 text-center text-muted">
-                                                        <div class="col-3 text-start">PRODUCT DETAILS</div>
-                                                        <div class="col-3">QUANTITY</div>
-                                                        <div class="col-3">PRICE</div>
-                                                        <div class="col-3">TOTAL</div>
-                                                    </div>
-                                                </div>
-                                                <div class="productList">
-                                                    <div class="row">
-                                                        <div class="col-md-3 py-3 d-flex align-items-center">
-                                                            <div class="img">
-                                                                <img src="../images/logo.png" alt="Product Image" class='img-fluid'>
-                                                            </div>
-                                                            <div class="content">
-                                                                <h6 class="title">Title</h6>
-                                                                <p class="cat"><code>Category</code></p>
-                                                                <button class="trashBtn btn outline-0 border-0 text-muted px-0">Remove</button>
-                                                            </div>
-                                                        </div>
-                                                        <div class="QBOX col-md-3 py-3 ps-4 d-flex justify-content-center">
-                                                            <div class="minus">
-                                                                <i class="fas fa-minus"></i>
-                                                            </div>
-                                                            <div class="q mx-2">
-                                                                <p>1</p>
-                                                            </div>
-                                                            <div class="plus">
-                                                                <i class="fas fa-plus"></i>
-                                                            </div>
-                                                        </div>
-                                                        <div class="col-md-3 py-3 text-center">
-                                                            <div class="price">$123</div>
-                                                        </div>
-                                                        <div class="col-md-3 text-center py-3">
-                                                            <div class="total">$0</div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="productList">
-                                                    <div class="row">
-                                                        <div class="col-md-3 py-3 d-flex align-items-center">
-                                                            <div class="img">
-                                                                <img src="../images/logo.png" alt="Product Image" class='img-fluid'>
-                                                            </div>
-                                                            <div class="content">
-                                                                <h6 class="title">Title</h6>
-                                                                <p class="cat"><code>Category</code></p>
-                                                                <button class="trashBtn btn outline-0 border-0 text-muted px-0">Remove</button>
-                                                            </div>
-                                                        </div>
-                                                        <div class="QBOX col-md-3 py-3 ps-4 d-flex justify-content-center">
-                                                            <div class="minus">
-                                                                <i class="fas fa-minus"></i>
-                                                            </div>
-                                                            <div class="q mx-2">
-                                                                <p>1</p>
-                                                            </div>
-                                                            <div class="plus">
-                                                                <i class="fas fa-plus"></i>
-                                                            </div>
-                                                        </div>
-                                                        <div class="col-md-3 py-3 text-center">
-                                                            <div class="price">$123</div>
-                                                        </div>
-                                                        <div class="col-md-3 text-center py-3">
-                                                            <div class="total">$0</div>
-                                                        </div>
-                                                    </div>
-                                                </div>
                                               </div>
                                           </div>
                                           <div class="col-md-3 text-muted font-weigh-bold">
@@ -173,7 +111,7 @@
                                                 <div>
                                                     <p class='my-0'>TOTAL COST</p>
                                                   </div>
-                                                  <div class="sum my-0">$251</div>
+                                                  <div class="sum my-0">$0</div>
                                               </div>
                                           <button class="btn w-100 btn-primary text-light mt-4">CHECKOUT</button>
                                           </div>
@@ -202,7 +140,7 @@
                                         <img src="../images/logo.png" alt="Product Image" class='img-fluid'>
                                     </div>
                                     <div class="content text-center">
-                                        <h6 class="title">Title</h6>
+                                        <h6 class="title">Title 0</h6>
                                         <p class="cat"><code>Category</code></p>
                                         <p class="amount text-muted">$23</p>
                                         <button class="addBtn btn btn-primary w-100 text-white outline-0 border-0 px-0">Add</button>
@@ -213,7 +151,7 @@
                                         <img src="../images/logo.png" alt="Product Image" class='img-fluid'>
                                     </div>
                                     <div class="content text-center">
-                                        <h6 class="title">Title</h6>
+                                        <h6 class="title">Title 1</h6>
                                         <p class="cat"><code>Category</code></p>
                                         <p class="amount text-muted">$3</p>
                                         <button class="addBtn btn btn-primary w-100 text-white outline-0 border-0 px-0">Add</button>
@@ -224,7 +162,7 @@
                                         <img src="../images/logo.png" alt="Product Image" class='img-fluid'>
                                     </div>
                                     <div class="content text-center">
-                                        <h6 class="title">Title</h6>
+                                        <h6 class="title">Title 2</h6>
                                         <p class="cat"><code>Category</code></p>
                                         <p class="amount text-muted">$1223</p>
                                         <button class="addBtn btn btn-primary w-100 text-white outline-0 border-0 px-0">Add</button>
@@ -235,7 +173,7 @@
                                         <img src="../images/logo.png" alt="Product Image" class='img-fluid'>
                                     </div>
                                     <div class="content text-center">
-                                        <h6 class="title">Title</h6>
+                                        <h6 class="title">Title 3</h6>
                                         <p class="cat"><code>Category</code></p>
                                         <p class="amount text-muted">$1212313</p>
                                         <button class="addBtn btn btn-primary w-100 text-white outline-0 border-0 px-0">Add</button>
@@ -246,7 +184,7 @@
                                         <img src="../images/logo.png" alt="Product Image" class='img-fluid'>
                                     </div>
                                     <div class="content text-center">
-                                        <h6 class="title">Title</h6>
+                                        <h6 class="title">Title 4</h6>
                                         <p class="cat"><code>Category</code></p>
                                         <p class="amount text-muted">$123</p>
                                         <button class="addBtn btn btn-primary w-100 text-white outline-0 border-0 px-0">Add</button>
@@ -257,7 +195,7 @@
                                         <img src="../images/logo.png" alt="Product Image" class='img-fluid'>
                                     </div>
                                     <div class="content text-center">
-                                        <h6 class="title">Title</h6>
+                                        <h6 class="title">Title 5</h6>
                                         <p class="cat"><code>Category</code></p>
                                         <p class="amount text-muted">$123</p>
                                         <button class="addBtn btn btn-primary w-100 text-white outline-0 border-0 px-0">Add</button>
@@ -268,7 +206,7 @@
                                         <img src="../images/logo.png" alt="Product Image" class='img-fluid'>
                                     </div>
                                     <div class="content text-center">
-                                        <h6 class="title">Title</h6>
+                                        <h6 class="title">Title 6</h6>
                                         <p class="cat"><code>Category</code></p>
                                         <p class="amount text-muted">$123</p>
                                         <button class="addBtn btn btn-primary w-100 text-white outline-0 border-0 px-0">Add</button>
@@ -279,7 +217,7 @@
                                         <img src="../images/logo.png" alt="Product Image" class='img-fluid'>
                                     </div>
                                     <div class="content text-center">
-                                        <h6 class="title">Title</h6>
+                                        <h6 class="title">Title 7</h6>
                                         <p class="cat"><code>Category</code></p>
                                         <p class="amount text-muted">$123</p>
                                         <button class="addBtn btn btn-primary w-100 text-white outline-0 border-0 px-0">Add</button>
@@ -290,7 +228,7 @@
                                         <img src="../images/logo.png" alt="Product Image" class='img-fluid'>
                                     </div>
                                     <div class="content text-center">
-                                        <h6 class="title">Title</h6>
+                                        <h6 class="title">Title 8</h6>
                                         <p class="cat"><code>Category</code></p>
                                         <p class="amount text-muted">$123</p>
                                         <button class="addBtn btn btn-primary w-100 text-white outline-0 border-0 px-0">Add</button>
@@ -301,7 +239,7 @@
                                         <img src="../images/logo.png" alt="Product Image" class='img-fluid'>
                                     </div>
                                     <div class="content text-center">
-                                        <h6 class="title">Title</h6>
+                                        <h6 class="title">Title 9</h6>
                                         <p class="cat"><code>Category</code></p>
                                         <p class="amount text-muted">$123</p>
                                         <button class="addBtn btn btn-primary w-100 text-white outline-0 border-0 px-0">Add</button>
@@ -312,7 +250,7 @@
                                         <img src="../images/logo.png" alt="Product Image" class='img-fluid'>
                                     </div>
                                     <div class="content text-center">
-                                        <h6 class="title">Title</h6>
+                                        <h6 class="title">Title 10</h6>
                                         <p class="cat"><code>Category</code></p>
                                         <p class="amount text-muted">$123</p>
                                         <button class="addBtn btn btn-primary w-100 text-white outline-0 border-0 px-0">Add</button>

@@ -93,3 +93,9 @@
     /* color: rgb(99, 97, 97); */
     font-size: 14px;
 }
+.plus, .minus {
+    pointer-events: none;
+}
+.plus i, .minus i {
+    pointer-events: all;
+}
