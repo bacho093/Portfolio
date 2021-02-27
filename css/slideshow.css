@@ -1,3 +1,71 @@
+body {
+    background: #282e34;
+    transition: all 0.2s;
+}
+/* width */
+::-webkit-scrollbar {
+    width: 7px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: transparent; 
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #d5c292c0; 
+    border-radius: 10px;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #D5C292; 
+  }
+header {
+    width: 100%;
+    height: 100%;
+}
+a {
+    color: inherit;
+    text-decoration: none;
+}
+.logo a {
+    font-size: 30px;
+    color: #D5C292;
+    cursor: pointer;
+    transition: 0.2s;
+}
+.navigation ul {
+    margin-top: 30px;
+}
+.navigation ul li {
+    padding: 5px 0;
+    overflow: hidden;
+}
+.navigation ul li:not(:last-child) {
+    margin-right: 60px;
+}
+.navigation ul li a {
+    color: #dadada;
+    font-size: 14px;
+    opacity: 0.7;
+    transition: 0.2s;
+}
+.navigation ul li a:hover {
+    opacity: 1;
+}
+  .nav .nav-item {
+    width: 50%;
+  }
+  .nav .nav-item .nav-link {
+    text-align: center;
+    color: rgb(156, 153, 153);
+    font-size: 20px;
+  }
+  .nav .nav-item .nav-link.active {
+    color: rgb(129, 126, 126);
+  }
 /* SLIDE 1 */
 .slides > div {
     height: 50vh;
